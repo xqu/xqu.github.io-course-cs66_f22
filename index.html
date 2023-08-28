@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.17">
+<title>Machine Learning</title>
+<link rel="stylesheet" href="style/front.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>CS 66: Machine Learning - Fall 2022</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_announcements">Announcements</a></li>
+<li><a href="#_course_info">Course Info</a>
+<ul class="sectlevel2">
+<li><a href="#_support_staff_office_hours">Support Staff &amp; Office Hours</a></li>
+</ul>
+</li>
+<li><a href="#_course_goals">Course Goals</a></li>
+<li><a href="#_inclusion_statement">Inclusion Statement</a></li>
+<li><a href="#_schedule"><strong>Schedule</strong></a></li>
+<li><a href="#_grading_policies">Grading Policies</a></li>
+<li><a href="#_lab_policy">Lab Policy</a>
+<ul class="sectlevel2">
+<li><a href="#_late_policy">Late Policy</a></li>
+</ul>
+</li>
+<li><a href="#_academic_integrity">Academic Integrity</a></li>
+<li><a href="#_academic_accommodations">Academic Accommodations</a></li>
+<li><a href="#_programming_style">Programming Style</a></li>
+<li><a href="#_edstem">EdSTEM</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1 anns">
+<h2 id="_announcements">Announcements</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#current">Current Week Notes</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_course_info">Course Info</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Welcome to CPSC 66.</p>
+</div>
+<div class="paragraph">
+<p>This course will introduce algorithms and frameworks that train computers to learn from data in order to better complete specific tasks. The first part of the course will focus on the task of making predictions (supervised learning).  The course will then cover other areas of the field including structured learning, unsupervised learning, and semi-supervised learning, among others.  The course will also develop general machine learning methodologies; frameworks for analyzing and validating algorithms and theoretical foundations.</p>
+</div>
+<div class="paragraph">
+<p>Please be aware that many elements on the course website will change throughout the semester, including the course schedule.</p>
+</div>
+<div class="paragraph">
+<p><strong>It is your responsibility to review the course website periodically for updates.</strong></p>
+</div>
+<div class="paragraph">
+<p>We value any and all student feedback. Please be constructive in any comments so that we can adjust the course as best possible.
+This semester, we are using EdSTEM to manage course discussions and announcements.</p>
+</div>
+<div class="paragraph">
+<p><strong>Meeting Times:</strong></p>
+</div>
+<table class="tableblock frame-all grid-all center" style="width: 90%;">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Section</th>
+<th class="tableblock halign-left valign-top">Days</th>
+<th class="tableblock halign-left valign-top">Time</th>
+<th class="tableblock halign-left valign-top">Room</th>
+<th class="tableblock halign-left valign-top">Instructor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TR</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">11:20 AM - 12:35 PM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SCI 158</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.cs.swarthmore.edu/~xqu1/">Xiaodong Qu</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all center" style="width: 90%;">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Lab</th>
+<th class="tableblock halign-left valign-top">Day</th>
+<th class="tableblock halign-left valign-top">Time</th>
+<th class="tableblock halign-left valign-top">Room</th>
+<th class="tableblock halign-left valign-top">Instructor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tue</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">1:05 PM - 2:35 PM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SCI 240</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Xiaodong Qu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tue</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">2:45 PM - 4:15 PM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SCI 240</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Xiaodong Qu</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_support_staff_office_hours">Support Staff &amp; Office Hours</h3>
+<table class="tableblock frame-all grid-all fit-content center">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Office Hours</th>
+<th class="tableblock halign-left valign-top">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Xiaodong Qu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Thursdays, 1:30 PM - 4:30 PM (and by appt)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SCI 252, or <a href="https://swarthmore.zoom.us/j/3979594015">Zoom</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_course_goals">Course Goals</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By the end of the course, we hope that you will have developed the
+following skills:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>several machine learning frameworks, including supervised learning, unsupervised learning, and hybrid approaches</p>
+</li>
+<li>
+<p>various algorithms for the frameworks we explore, including the variation in data representation</p>
+</li>
+<li>
+<p>how to choose and apply an appropriate framework and algorithm for a new problem</p>
+</li>
+<li>
+<p>practical considerations for data, including data preprocessing, feature engineering, and resource constraints</p>
+</li>
+<li>
+<p>the core concept of generalization, and the associated theoretical tools for inspecting both our data and models</p>
+</li>
+<li>
+<p>theoretical and empirical evaluation of performance</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inclusion_statement">Inclusion Statement</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Diversity, inclusion, and a mutual sense of belonging are all core values of this course. All participants in this course must be treated with respect by other members of the Swarthmore CS community. We must all strive, students and faculty both, to never make anyone feel unwelcome or unsafe in any way. Violations of these principles are viewed as unacceptable, and we take them very seriously. If you ever feel discriminated against or otherwise excluded, no matter how minor the offense, we encourage you to reach out to Xiaodong, or one of the college deans.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_schedule"><strong>Schedule</strong></h2>
+<div class="sectionbody">
+<!-- FILE AUTO-GENERATED: DO NOT DIRECTLY EDIT THIS FILE --><TABLE class="colorTable">
+<TR>
+  <TD ><B>WEEK</B></TD>
+  <TD ><B>DAY</B></TD>
+  <TD ><B>ANNOUNCEMENTS</B></TD>
+  <TD ><B>TOPIC &amp; READING</B></TD>
+  <TD ><B>NOTES &amp; LABS</B></TD>
+</TR>
+<TR class="odd"> <TD ROWSPAN="2">1</TD> <TD ><p >Aug 30</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="2"><h4>Course Introduction</h4>
+<ul>
+<li>Course Introduction</li>
+<li>Machine Learning (ML)</li>
+<li>Interdisciplinary Research<br>
+ <br></li>
+<li><a href="https://scholar.google.com/citations?view_op=top_venues&amp;hl=en&amp;vq=eng">Top CS Publications</a></li>
+<li><a href="https://scholar.google.com/citations?view_op=top_venues&amp;hl=en&amp;vq=eng_artificialintelligence">Artificial Intelligence</a></li>
+<li><a href="https://neurips.cc/Conferences/2021">NeurIPS</a></li>
+<li><a href="https://blog.neurips.cc/2021/11/30/announcing-the-neurips-2021-award-recipients/">NeurIPS 2021 Best Paper Award</a></li>
+<li><a href="https://aaai.org/Conferences/AAAI-21/student-abstract-and-poster-program/">AAAI-21 Student Poster Program</a></li>
+<li><a href="https://ojs.aaai.org/index.php/AAAI/issue/view/402">AAAI Accepted Student Posters</a></li>
+<li><a href="https://aaai.org/Awards/paper.php">AAAI PAPER AWARDS</a></li>
+</ul></TD> <TD ROWSPAN="2"><p><a href="notes/week01.html">Notes 1</a><br>
+<a href="labs/lab01.html">Lab 1</a></p></TD> </TR>
+<TR class="odd"> <!-- SPANNED ROW --> <TD ><p >Sep 01</p></TD> <TD>&nbsp;</TD> <!-- SPANNED ROW --> <!-- SPANNED ROW --> </TR>
+<TR class="even"> <TD ROWSPAN="2">2</TD> <TD ><p >Sep 06</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="2"><h4>Supervised Learning</h4>
+<ul>
+<li>The Concept</li>
+<li>Algorithms</li>
+<li>Examples</li>
+<li>Related Research Questions</li>
+</ul></TD> <TD ROWSPAN="2"><p><a href="notes/week02.html">Notes 2</a><br>
+<a href="labs/lab02.html">Lab 2</a></p></TD> </TR>
+<TR class="even"> <!-- SPANNED ROW --> <TD class="None"><p class="None">Sep 08</p></TD> <TD rowspan="1"  class="None"><p><p>Drop/Add Ends <B>(Sep 09)</B></p></p></TD> <!-- SPANNED ROW --> <!-- SPANNED ROW --> </TR>
+<TR class="odd"> <TD ROWSPAN="2">3</TD> <TD ><p >Sep 13</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="2"><h4>Classification and Regression</h4>
+<ul>
+<li>Linear Discriminant Analysis (LDA)</li>
+<li>Support Vector Machine (SVM)</li>
+<li>Nearest Neighbors</li>
+<li>Decision Trees</li>
+<li>Ensemble methods</li>
+<li>Related Research Questions</li>
+</ul></TD> <TD ROWSPAN="2"><p><a href="notes/week03.html">Notes 3</a><br>
+<a href="labs/lab03.html">Lab 3</a></p></TD> </TR>
+<TR class="odd"> <!-- SPANNED ROW --> <TD ><p >Sep 15</p></TD> <TD>&nbsp;</TD> <!-- SPANNED ROW --> <!-- SPANNED ROW --> </TR>
+<TR class="even"> <TD ROWSPAN="2">4</TD> <TD ><p >Sep 20</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="2"><h4>Unsupervised Learning</h4>
+<ul>
+<li>The Concept</li>
+<li>Algorithms</li>
+<li>Examples</li>
+<li>Related Research Questions</li>
+</ul></TD> <TD ROWSPAN="2"><p><a href="notes/week04.html">Notes 4</a><br>
+<a href="labs/lab04.html">Lab 4</a></p></TD> </TR>
+<TR class="even"> <!-- SPANNED ROW --> <TD ><p >Sep 22</p></TD> <TD>&nbsp;</TD> <!-- SPANNED ROW --> <!-- SPANNED ROW --> </TR>
+<TR class="odd"> <TD ROWSPAN="2">5</TD> <TD ><p >Sep 27</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="2"><h4>Clustering</h4>
+<ul>
+<li>K-means</li>
+<li>Hierarchical Clustering</li>
+<li>DBSCAN</li>
+<li>Related Research Questions</li>
+</ul></TD> <TD ROWSPAN="2"><p><a href="notes/week05.html">Notes 5</a><br>
+<a href="labs/lab05.html">Lab 5</a></p></TD> </TR>
+<TR class="odd"> <!-- SPANNED ROW --> <TD ><p >Sep 29</p></TD> <TD>&nbsp;</TD> <!-- SPANNED ROW --> <!-- SPANNED ROW --> </TR>
+<TR class="even"> <TD ROWSPAN="2">6</TD> <TD ><p >Oct 04</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="2"><h4>ML Research</h4>
+<ul>
+<li>Literature Review</li>
+<li>ML example papers</li>
+<li>Your understanding of ML</li>
+<li>ML Research Design</li>
+<li>Your ML research questions</li>
+</ul></TD> <TD ROWSPAN="2"><p><a href="notes/week06.html">Notes 6</a><br>
+<a href="labs/lab06.html">Lab 6</a></p></TD> </TR>
+<TR class="even"> <!-- SPANNED ROW --> <TD class="None"><p class="None">Oct 06</p></TD> <TD rowspan="1"  class="None"><p><p><a href="labs/midterm.html">Mid-Term</a> Due 23:59 EST</p></p></TD> <!-- SPANNED ROW --> <!-- SPANNED ROW --> </TR>
+<TR class="even"> <TD ROWSPAN="2">&nbsp;</TD> <TD class="break"><p class="break">Oct 11</p></TD> <TD rowspan="2" colspan="3" class="break"><p class="break"><p>Fall Break</p></p></TD> <!-- SPANNED COL --> <!-- SPANNED COL --> </TR>
+<TR class="even"> <!-- SPANNED ROW --> <TD class="break"><p class="break">Oct 13</p></TD> <!-- SPANNED ROW --> <!-- SPANNED COL --> <!-- SPANNED COL --> </TR>
+<TR class="odd"> <TD ROWSPAN="2">7</TD> <TD ><p >Oct 18</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="2"><h4>Deep Learning</h4>
+<ul>
+<li>The Concept</li>
+<li>Algorithms</li>
+<li>Related Research Questions</li>
+<li>Best Practices</li>
+<li>Resources</li>
+<li>Example Papers</li>
+<li>Your Research paper</li>
+</ul></TD> <TD ROWSPAN="2"><p><a href="notes/week07.html">Notes 7</a><br>
+<a href="labs/lab06.html">Lab 6</a></p></TD> </TR>
+<TR class="odd"> <!-- SPANNED ROW --> <TD ><p >Oct 20</p></TD> <TD>&nbsp;</TD> <!-- SPANNED ROW --> <!-- SPANNED ROW --> </TR>
+<TR class="even"> <TD ROWSPAN="2">8</TD> <TD ><p >Oct 25</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="2"><h4>CNN</h4>
+<ul>
+<li>The Concept</li>
+<li>Algorithms</li>
+<li>Related Research Questions</li>
+<li>Your Research paper</li>
+</ul></TD> <TD ROWSPAN="2"><p><a href="notes/week08.html">Notes 8</a><br>
+<a href="labs/lab07.html">Lab 7</a></p></TD> </TR>
+<TR class="even"> <!-- SPANNED ROW --> <TD ><p >Oct 27</p></TD> <TD>&nbsp;</TD> <!-- SPANNED ROW --> <!-- SPANNED ROW --> </TR>
+<TR class="odd"> <TD ROWSPAN="2">9</TD> <TD ><p >Nov 01</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="2"><h4>Final Paper First draft</h4>
+<ul>
+<li>Research questions</li>
+<li>Literature review</li>
+<li>Methods</li>
+<li>Results</li>
+<li>Discussion</li>
+<li>Conclusion</li>
+</ul></TD> <TD ROWSPAN="2"><p><a href="notes/week09.html">Notes 9</a><br>
+<a href="labs/lab07.html">Lab 7</a></p></TD> </TR>
+<TR class="odd"> <!-- SPANNED ROW --> <TD ><p >Nov 03</p></TD> <TD>&nbsp;</TD> <!-- SPANNED ROW --> <!-- SPANNED ROW --> </TR>
+<TR class="even"> <TD ROWSPAN="2">10</TD> <TD ><p >Nov 08</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="2"><h4>RNN</h4>
+<ul>
+<li>The Concept</li>
+<li>Algorithms</li>
+<li>LSTM</li>
+<li>Related Research Questions</li>
+</ul></TD> <TD ROWSPAN="2"><p><a href="notes/week10.html">Notes 10</a><br>
+<a href="labs/lab08.html">Lab 8</a></p></TD> </TR>
+<TR class="even"> <!-- SPANNED ROW --> <TD ><p >Nov 10</p></TD> <TD>&nbsp;</TD> <!-- SPANNED ROW --> <!-- SPANNED ROW --> </TR>
+<TR class="odd"> <TD ROWSPAN="2">11</TD> <TD ><p >Nov 15</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="2"><h4>Peer Review</h4>
+<ul>
+<li>Reviewer guide</li>
+<li>Innovation</li>
+<li>Connection</li>
+<li>Impact</li>
+<li>Clarity</li>
+<li>Code</li>
+<li>Overleaf and LaTeX</li>
+</ul></TD> <TD ROWSPAN="2"><p><a href="notes/week11.html">Notes 11</a><br>
+<a href="labs/lab09.html">Lab 9</a></p></TD> </TR>
+<TR class="odd"> <!-- SPANNED ROW --> <TD ><p >Nov 17</p></TD> <TD>&nbsp;</TD> <!-- SPANNED ROW --> <!-- SPANNED ROW --> </TR>
+<TR class="even"> <TD ROWSPAN="2">12</TD> <TD ><p >Nov 22</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="1"><h4>Attention and Transformer</h4>
+<ul>
+<li>The Concept</li>
+<li>Algorithms</li>
+<li>Examples</li>
+<li>Related Research Questions</li>
+</ul></TD> <TD ROWSPAN="1"><p><a href="notes/week12.html">Notes 12</a><br>
+<a href="labs/lab09.html">Lab 9</a></p></TD> </TR>
+<TR class="even"> <!-- SPANNED ROW --> <TD class="break"><p class="break">Nov 24</p></TD> <TD rowspan="1" colspan="3" class="break"><p class="break"><p>Thanksgiving Break</p></p></TD> <!-- SPANNED COL --> <!-- SPANNED COL --> </TR>
+<TR class="odd"> <TD ROWSPAN="2">13</TD> <TD ><p >Nov 29</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="2"><h4>Second draft and peer review</h4>
+<ul>
+<li>Research problems</li>
+<li>Literature review</li>
+<li>Methods</li>
+<li>Results</li>
+<li>Discussion</li>
+<li>Conclusion</li>
+</ul></TD> <TD ROWSPAN="2"><p><a href="notes/week13.html">Notes 13</a><br>
+<a href="labs/lab10.html">Lab 10</a></p></TD> </TR>
+<TR class="odd"> <!-- SPANNED ROW --> <TD ><p >Dec 01</p></TD> <TD>&nbsp;</TD> <!-- SPANNED ROW --> <!-- SPANNED ROW --> </TR>
+<TR class="even"> <TD ROWSPAN="1">14</TD> <TD ><p >Dec 06</p></TD> <TD>&nbsp;</TD> <TD ROWSPAN="1"><h4>Reinforcement Learning</h4>
+<p><a name = "current"></a>  <!-- This marks the current week, for easy nav --></p>
+<ul>
+<li>The Concept</li>
+<li>Algorithms</li>
+<li>Examples</li>
+<li>Related Research Questions</li>
+</ul></TD> <TD ROWSPAN="1"><p><a href="notes/week14.html">Notes 14</a><br>
+<a href="labs/lab11.html">Lab 11</a></p></TD> </TR>
+<TR class="even"> <TD ROWSPAN="1">&nbsp;</TD> <TD class="exam"><p class="exam">Dec 12</p></TD> <TD rowspan="1" colspan="3" class="exam"><p class="exam"><p><a href="labs/finalf22.html">Final Project</a> Due 23:59 EST</p></p></TD> <!-- SPANNED COL --> <!-- SPANNED COL --> </TR>
+</TABLE></BODY></HTML>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_grading_policies">Grading Policies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Grades will be weighted as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">35%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lab assignments</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">30%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Midterm Project</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">30%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Final Project</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">5%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class Participation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lab_policy">Lab Policy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This course features weekly lab assignments which are the largest component of
+your course grade. <span class="yellow-background"><strong>Lab attendance is required by all
+students</strong>.</span> You must attend the <a href="#_course_info">lab session</a> for which you
+are enrolled.</p>
+</div>
+<div class="paragraph">
+<p>Lab assignments will typically be released on Wednesday and will be due by midnight on the following Tuesday. You are strongly encouraged to
+start early and to attend the office hours for possible questions.</p>
+</div>
+<div class="paragraph">
+<p>You will submit your assignments electronically using emails.
+You may submit your assignment multiple times, and a history of previous
+submissions will be saved. You are encouraged to submit your work regularly.</p>
+</div>
+<div class="sect2">
+<h3 id="_late_policy">Late Policy</h3>
+<div class="paragraph">
+<p>Labs will typically be due Tuesdays before midnight. Late submissions <strong>will
+not be accepted</strong>. Even if you do not fully complete a lab assignment you should
+submit what you have done to receive partial credit.</p>
+</div>
+<div class="paragraph">
+<p>If you feel that you need an extension on an assignment or that you are unable
+to attend class for two or more meetings due to a medical condition (e.g.,
+extended illness, concussion, hospitalization) or other emergency, you must
+contact the dean&#8217;s office and your instructors. Faculty will coordinate with
+the deans to determine and provide the appropriate accommodations. Note that
+for illnesses, the
+<a href="https://www.swarthmore.edu/student-health/medical-excuse-policy">College&#8217;s
+medical excuse policy</a> states that you must be seen and diagnosed by the Worth
+Health Center if you would like them to contact your class dean with
+corroborating medical information.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_academic_integrity">Academic Integrity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Academic honesty is required in all your work. Under no circumstances may
+you hand in work done with or by someone else under your own name. Discussing
+ideas and approaches to problems with others on a general level is encouraged,
+but you should never share your solutions with anyone else nor allow others to
+share solutions with you. You may not examine solutions belonging to someone else,
+nor may you let anyone else look at or make a copy of your solutions. This includes,
+but is not limited to, obtaining solutions from students who previously took the
+course or solutions that can be found online. You may not share information about
+your solution in such a manner that a student could reconstruct your solution in a
+meaningful way (such as by dictation, providing a detailed outline, or discussing
+specific aspects of the solution). You may not share your solutions even after the
+due date of the assignment.</p>
+</div>
+<div class="paragraph">
+<p>In your solutions, you are permitted to include material which was distributed
+in class, material which is found in the course textbook, and material developed
+by or with an assigned partner. In these cases, you should always include detailed
+comments indicating on which parts of the assignment you received help and what
+your sources were.</p>
+</div>
+<div class="paragraph">
+<p>When working on quizzes, exams, or similar assessments, you are not permitted to
+communicate with anyone about the exam during the entire examination period
+(even if you have already submitted your work). You are not permitted to use any
+resources to complete the exam other than those explicitly permitted by course
+policy. (For instance, you may not look at the course website during the exam
+unless explicitly permitted by the instructor when the exam is distributed.)</p>
+</div>
+<div class="paragraph">
+<p>Failure to abide by these rules constitutes academic dishonesty and will lead
+to a hearing of the College Judiciary Committee. According to the Faculty Handbook:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Because plagiarism is considered to be so serious a transgression, it is the
+opinion of the faculty that for the first offense, failure in the course and,
+as appropriate, suspension for a semester or deprivation of the degree in that
+year is suitable; for a second offense, the penalty should normally be
+expulsion.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>This policy applies to all course work, including but not limited to code,
+written solutions (e.g. proofs, analyses, reports, etc.), exams, and so on.
+This is not meant to be an enumeration of all possible violations; students
+are responsible for seeking clarification if there is any doubt about the
+level of permissible communication.</p>
+</div>
+<div class="paragraph">
+<p>The general ethos of this policy is that actions which shortcut the learning
+process are forbidden while actions which promote learning are encouraged.
+Studying lecture materials together, for example, provides an additional avenue
+for learning and is encouraged. Using a classmate&#8217;s solution, however, is
+prohibited because it avoids the learning process entirely. If you have any
+questions about what is or is not permissible, please contact your instructor.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_academic_accommodations">Academic Accommodations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you believe you need accommodations for a disability or a chronic medical
+condition, please contact Student Disability Services (via email at
+<code>studentdisabilityservices@swarthmore.edu</code>) to arrange an
+appointment to discuss your needs. As appropriate, the office will issue
+students with documented disabilities or medical conditions a formal
+Accommodations Letter. Since accommodations require early planning and are not
+retroactive, please contact Student Disability Services as soon as possible.</p>
+</div>
+<div class="paragraph">
+<p>For details about the accommodations process, visit the <a href="https://www.swarthmore.edu/academic-advising-support/welcome-to-student-disability-services">Student
+Disability Services website</a>.</p>
+</div>
+<div class="paragraph">
+<p>To receive an accommodation for a course activity, you must have an official
+accommodation letter from the Office of Student Disability Services <strong>and</strong> you
+need to meet with course staff to work out the details of your accommodation
+<strong>at least two weeks prior to the activity</strong>.</p>
+</div>
+<div class="paragraph">
+<p>You are also welcome to contact any of the course staff privately to discuss
+your academic needs.  However, all disability-related accommodations must be
+arranged, in advance, through Student Disability Services.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_programming_style">Programming Style</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Programming is not a dry mechanical process, but a form of art. Well written
+code has an aesthetic appeal while poor form can make other programmers and
+instructors cringe. Programming assignments will be graded based on style and
+correctness. Good programming practices usually include many of the following
+principles:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A comment at the top of the program that includes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Program authors</p>
+</li>
+<li>
+<p>Date or Dates</p>
+</li>
+<li>
+<p>A brief description of what the program does</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Concise comments that summarize major sections of your code</p>
+</li>
+<li>
+<p>Meaningful variable and function names</p>
+</li>
+<li>
+<p>Function comments that include:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>description of what function does</p>
+</li>
+<li>
+<p>description of input value(s) (parameter values)</p>
+</li>
+<li>
+<p>description of return value</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Well organized code</p>
+</li>
+<li>
+<p>White space or comments to improve legibility</p>
+</li>
+<li>
+<p>Avoidance of large blocks of copy-pasted code</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_edstem">EdSTEM</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This semester, we are using <a href="https://edstem.org/us/courses/28042/discussion/">EdSTEM</a> to manage course
+discussions and announcements.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2022-09-13 09:13:59 -0400
+</div>
+</div>
+</body>
+</html>
